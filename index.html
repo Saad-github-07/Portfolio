@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Saad Jamadar | AI & Data Science</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;500;700&display=swap');
+        
+        :root {
+            --neon-cyan: #00f3ff;
+            --neon-pink: #ff00ff;
+            --neon-purple: #bc13fe;
+            --dark-bg: #050505;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Neon Glow Effects */
+        .neon-text-cyan {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.2);
+        }
+
+        .neon-border-cyan {
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2), inset 0 0 10px rgba(0, 243, 255, 0.1);
+        }
+
+        /* Animated Background */
+        .mesh-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 243, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .input-glow:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating { animation: float 4s ease-in-out infinite; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--dark-bg); }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--neon-cyan), var(--neon-pink));
+            border-radius: 10px;
+        }
+
+        /* Large Icon Styling */
+        .big-icon {
+            font-size: 4rem;
+            transition: all 0.3s ease;
+        }
+        @media (min-width: 768px) {
+            .big-icon { font-size: 6rem; }
+        }
+        .social-icon {
+            font-size: 3rem;
+        }
+        @media (min-width: 768px) {
+            .social-icon { font-size: 5rem; }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden selection:bg-cyan-500 selection:text-black">
+
+    <div class="mesh-gradient"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 md:px-6 py-4">
+        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 md:px-8 py-3 flex justify-between items-center border-slate-800">
+            <div class="text-xl md:text-2xl font-bold tracking-tighter font-heading">
+                <span class="neon-text-cyan">S</span>AAD<span class="text-pink-500">.</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
+                <a href="#home" class="hover:text-cyan-400 transition uppercase">Home</a>
+                <a href="#about" class="hover:text-cyan-400 transition uppercase">About</a>
+                <a href="#projects" class="hover:text-cyan-400 transition uppercase">Projects</a>
+                <a href="#certificates" class="hover:text-cyan-400 transition uppercase">Certificates</a>
+                <a href="#contact" class="hover:text-cyan-400 transition uppercase">Contact</a>
+            </div>
+            <a href="mailto:msajamadar@gmail.com" class="neon-border-cyan px-4 md:px-6 py-2 rounded-lg text-[10px] md:text-xs font-bold uppercase tracking-widest hover:bg-cyan-500 hover:text-black transition-all">
+                Connect
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative pt-40 md:pt-20">
+        <div class="absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-cyan-500/10 blur-[120px] rounded-full -z-10"></div>
+        
+        <div class="floating mb-8 relative mt-10 md:mt-0">
+            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-cyan-500/50 p-1 bg-black overflow-hidden">
+                <img src="https://ui-avatars.com/api/?name=Mohammad+Saad+Jamadar&background=000&color=00f3ff&size=512&bold=true" alt="Saad" class="w-full h-full rounded-full object-cover">
+            </div>
+        </div>
+
+        <h2 class="text-cyan-400 font-bold tracking-[0.3em] uppercase text-[10px] md:text-sm mb-4">AI & Data Science Engineer</h2>
+        <h1 class="text-4xl md:text-8xl font-extrabold mb-6 tracking-tighter leading-tight md:leading-none">
+            MOHAMMAD <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">SAAD</span>
+        </h1>
+        
+        <p class="text-slate-400 max-w-2xl text-base md:text-xl mb-10 leading-relaxed font-light">
+            Designing the future of <span class="text-white font-medium border-b border-cyan-500/50">intelligence</span> and 
+            <span class="text-white font-medium border-b border-pink-500/50">web experiences</span> at Keystone School of Engineering.
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-6">
+            <a href="#projects" class="bg-cyan-500 text-black px-8 md:px-10 py-3 md:py-4 rounded-full font-bold hover:shadow-[0_0_30px_rgba(0,243,255,0.4)] transition transform hover:scale-105">
+                View My Files
+            </a>
+            
+            <!-- RESUME BUTTON (Commented as requested) -->
+            <!-- 
+            <a href="#" target="_blank" class="glass px-8 md:px-10 py-3 md:py-4 rounded-full font-bold hover:bg-white/10 transition border-white/10 text-white flex items-center justify-center gap-2">
+                <i class="fas fa-file-download"></i> Download Resume
+            </a>
+            -->
+
+            <a href="#contact" class="glass px-8 md:px-10 py-3 md:py-4 rounded-full font-bold hover:bg-white/10 transition border-white/10 text-white">
+                Contact Me
+            </a>
+        </div>
+    </section>
+
+    <!-- 01. About & Skills -->
+    <section id="about" class="py-20 md:py-32 px-6 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 md:gap-16 items-start">
+            <div class="lg:col-span-7">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 flex items-center">
+                    <span class="w-8 md:w-12 h-[2px] bg-cyan-500 mr-4"></span>
+                    <span class="neon-text-cyan">01.</span> THE VISION
+                </h2>
+                <div class="space-y-6 text-slate-400 text-base md:text-lg">
+                    <p>
+                        I am currently a 1st-year student navigating the world of <span class="text-white">Artificial Intelligence</span>. My journey started with a curiosity for how things work, leading me to build hardware alarms and full-scale web applications.
+                    </p>
+                </div>
+                
+                <div class="mt-12 grid grid-cols-2 gap-4 md:gap-6">
+                    <div class="glass p-5 md:p-6 rounded-2xl border-cyan-500/20">
+                        <h4 class="text-cyan-400 font-bold text-2xl md:text-3xl mb-1">1st</h4>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-500">Year Student</p>
+                    </div>
+                    <div class="glass p-5 md:p-6 rounded-2xl border-pink-500/20">
+                        <h4 class="text-pink-400 font-bold text-2xl md:text-3xl mb-1">10+</h4>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-500">Projects Built</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 glass p-8 md:p-10 rounded-3xl border-white/5 relative overflow-hidden">
+                <h3 class="text-lg md:text-xl font-bold mb-8 uppercase tracking-tighter text-white">Academic Journey</h3>
+                <div class="space-y-6">
+                    <div>
+                        <p class="font-bold text-white uppercase text-sm">Keystone School of Engineering</p>
+                        <p class="text-[11px] text-cyan-400/80 uppercase tracking-widest">B.E. AI & Data Science</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white/90 uppercase text-xs">MCE Society's Junior College</p>
+                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">HSC (11th & 12th)</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white/90 uppercase text-xs">Sardar Dastur Hoshang Boys' School</p>
+                        <p class="text-[10px] text-slate-500 uppercase tracking-widest">SSC (5th to 10th)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02. Projects Section -->
+    <section id="projects" class="py-20 md:py-32 px-6 bg-black/40">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 uppercase tracking-tighter">
+                <span class="neon-text-cyan">02.</span> FEATURED BUILDS
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <!-- Project 1 -->
+                <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-pink-500/40 transition-all duration-500 group">
+                    <div class="mb-6 flex justify-center">
+                        <i class="fas fa-gem big-icon text-pink-500/60 group-hover:text-pink-500 group-hover:scale-110 transition duration-500"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 tracking-tighter uppercase">BLOOM & PEARL</h3>
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">Handmade Crochet Accessories e-commerce platform.</p>
+                    <a href="https://bloom-and-pearl.netlify.app/" target="_blank" class="inline-block bg-white text-black px-6 py-2 rounded-full font-bold text-[10px] uppercase hover:bg-pink-500 transition">View Project</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-cyan-500/40 transition-all duration-500 group">
+                    <div class="mb-6 flex justify-center">
+                        <i class="fas fa-chart-line big-icon text-cyan-500/60 group-hover:text-cyan-500 group-hover:scale-110 transition duration-500"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 tracking-tighter uppercase">AI FinTrack</h3>
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">Intelligent money tracking system with bar graph outputs.</p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass p-8 rounded-[2.5rem] border-white/5 hover:border-red-500/40 transition-all duration-500 group">
+                    <div class="mb-6 flex justify-center">
+                        <i class="fas fa-fingerprint big-icon text-red-500/60 group-hover:text-red-500 group-hover:scale-110 transition duration-500"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 tracking-tighter uppercase">LASER GUARDIAN</h3>
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">Security system using laser trip-wires and auditory alerts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03. Certificates Section -->
+    <section id="certificates" class="py-20 md:py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 uppercase tracking-tighter">
+                <span class="neon-text-cyan">03.</span> CREDENTIALS
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certs -->
+                <div class="glass p-6 rounded-3xl border-white/5 hover:border-purple-500/40 transition-all group">
+                    <h3 class="text-lg font-bold mb-1 text-white uppercase">Generative AI Fundamentals</h3>
+                    <p class="text-xs text-slate-500 mb-6 font-semibold">Google Cloud</p>
+                    <a href="#" class="text-[10px] font-bold text-purple-400 flex items-center">VIEW CREDENTIAL <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                <div class="glass p-6 rounded-3xl border-white/5 hover:border-cyan-500/40 transition-all group">
+                    <h3 class="text-lg font-bold mb-1 text-white uppercase">Generative AI Essentials</h3>
+                    <p class="text-xs text-slate-500 mb-6 font-semibold">Microsoft & LinkedIn</p>
+                    <a href="#" class="text-[10px] font-bold text-cyan-400 flex items-center">VIEW CREDENTIAL <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-32 px-6 relative">
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tighter uppercase">Get In <span class="neon-text-cyan">Touch</span></h2>
+            <p class="text-slate-400 mb-12 text-base md:text-lg font-light max-w-xl mx-auto">
+                Have a project or a question? Send me a message and I'll get back to you soon.
+            </p>
+
+            <!-- NEON CONTACT FORM -->
+            <form name="contact" method="POST" data-netlify="true" class="glass p-8 md:p-12 rounded-[2.5rem] border-white/10 shadow-2xl space-y-6 max-w-2xl mx-auto mb-16 text-left">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-2">Full Name</label>
+                        <input type="text" name="name" placeholder="Saad Jamadar" required class="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-sm text-white input-glow transition-all">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-2">Email Address</label>
+                        <input type="email" name="email" placeholder="msajamadar@gmail.com" required class="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-sm text-white input-glow transition-all">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-2">Your Message</label>
+                    <textarea name="message" rows="4" placeholder="Let's build something awesome..." required class="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-sm text-white input-glow transition-all"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-cyan-500 text-black font-bold uppercase tracking-widest py-4 rounded-2xl hover:shadow-[0_0_30px_rgba(0,243,255,0.4)] transition-all transform">
+                    Send Message
+                </button>
+            </form>
+            
+            <!-- SOCIAL ICONS -->
+            <div class="flex flex-wrap justify-center gap-10 md:gap-16 max-w-2xl mx-auto">
+                <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank" class="social-icon text-slate-500 hover:text-cyan-400 transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/jamadar.saad.07/" target="_blank" class="social-icon text-slate-500 hover:text-pink-500 transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Saad-github-07" target="_blank" class="social-icon text-slate-500 hover:text-purple-400 transition transform hover:scale-110"><i class="fab fa-github"></i></a>
+                <a href="mailto:msajamadar@gmail.com" class="social-icon text-slate-500 hover:text-green-400 transition transform hover:scale-110"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <div class="pt-16 mt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-xs md:text-sm text-slate-500">
+                    Built by <span class="text-white font-bold">Saad Jamadar</span> &copy; 2025
+                </div>
+                <div class="text-[10px] font-bold text-cyan-500/50 uppercase tracking-[0.4em]">
+                    Pune | India
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
