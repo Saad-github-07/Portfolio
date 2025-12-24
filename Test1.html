@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Saad Jamadar | AI & Data Science Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Spline Viewer Script -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.72/build/spline-viewer.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;500;700&display=swap');
+        
+        :root { 
+            --neon-cyan: #00f3ff; 
+            --neon-pink: #ff00ff; 
+            --dark-bg: #050505; 
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--dark-bg); 
+            color: #ffffff; 
+            scroll-behavior: smooth; 
+        }
+
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+
+        .neon-text-cyan { 
+            color: var(--neon-cyan); 
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.6); 
+        }
+
+        .neon-border-cyan { 
+            border: 1px solid var(--neon-cyan); 
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3); 
+        }
+
+        .glass { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+        }
+
+        .input-glow:focus { 
+            outline: none; 
+            border-color: var(--neon-cyan); 
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3); 
+        }
+
+        .big-icon { 
+            font-size: 3.5rem; 
+            transition: all 0.3s ease; 
+        }
+        @media (min-width: 768px) { 
+            .big-icon { font-size: 6rem; } 
+        }
+
+        .floating { animation: float 4s ease-in-out infinite; }
+        @keyframes float { 
+            0%, 100% { transform: translateY(0px); } 
+            50% { transform: translateY(-10px); } 
+        }
+
+        #success-msg {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+
+        /* Styling for the Spline Container */
+        .spline-container {
+            width: 100%;
+            height: 400px;
+            max-width: 800px;
+            position: relative;
+            margin-top: -50px;
+            margin-bottom: -20px;
+        }
+
+        /* CSS to remove/hide the "Built with Spline" watermark */
+        spline-viewer::part(logo) {
+            display: none !important;
+        }
+
+        @media (min-width: 768px) {
+            .spline-container {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden selection:bg-cyan-500 selection:text-black">
+    
+    <div class="mesh-gradient fixed inset-0 z-[-1]" style="background: radial-gradient(circle at 20% 30%, rgba(0, 243, 255, 0.05) 0%, transparent 40%);"></div>
+
+    <!-- Success Modal -->
+    <div id="success-msg" class="glass p-8 rounded-3xl neon-border-cyan text-center w-80 shadow-2xl">
+        <i class="fas fa-check-circle text-5xl text-cyan-400 mb-4"></i>
+        <h3 class="text-xl font-bold uppercase mb-2">Message Sent!</h3>
+        <p class="text-sm text-slate-400 mb-6">Thanks for reaching out, Saad will get back to you soon.</p>
+        <button onclick="document.getElementById('success-msg').style.display='none'" class="bg-cyan-500 text-black font-bold uppercase px-6 py-2 rounded-full text-xs">Close</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-4 py-4">
+        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 md:px-8 py-3 flex justify-between items-center border-slate-800">
+            <div class="text-xl md:text-2xl font-bold font-heading">
+                <span class="neon-text-cyan">S</span>AAD<span class="text-pink-500">.</span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+                <a href="#vision" class="hover:text-cyan-400 transition">Vision</a>
+                <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+            </div>
+            <a href="#contact" class="neon-border-cyan px-4 py-2 rounded-lg text-[10px] md:text-xs font-bold uppercase hover:bg-cyan-500 hover:text-black transition-all">Connect</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        
+        <!-- Interactive Spline Component -->
+        <div class="spline-container">
+            <spline-viewer url="https://prod.spline.design/KiQ6K9HyyOti492Z/scene.splinecode"></spline-viewer>
+        </div>
+
+        <h2 class="text-cyan-400 font-bold tracking-widest uppercase text-[10px] mb-4">AI & Data Science Student</h2>
+        <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tighter leading-tight">MOHAMMAD <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">SAAD</span></h1>
+        <p class="text-slate-400 max-w-2xl text-base md:text-xl mb-10 font-light leading-relaxed">Designing the future of <span class="text-white border-b border-cyan-500">intelligence</span> at Keystone School of Engineering.</p>
+        <div class="flex flex-col md:flex-row gap-4">
+            <a href="#projects" class="bg-cyan-500 text-black px-10 py-3 rounded-full font-bold transition transform hover:scale-105">View Work</a>
+            <a href="#contact" class="glass px-10 py-3 rounded-full font-bold border-white/10 text-white">Contact</a>
+        </div>
+    </section>
+
+    <!-- Education & Vision -->
+    <section id="vision" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-8 uppercase tracking-tighter"><span class="neon-text-cyan">01.</span> Vision</h2>
+                <p class="text-slate-400 text-lg leading-relaxed">
+                    Building next-generation AI interfaces and hardware systems. Currently pursuing specialized knowledge in Data Science to solve real-world security and efficiency problems.
+                </p>
+            </div>
+            <div class="glass p-8 rounded-[2.5rem] border-white/10 shadow-lg">
+                <h3 class="text-white font-bold mb-6 uppercase tracking-widest text-sm border-b border-white/10 pb-2">Academic Path</h3>
+                <div class="space-y-4">
+                    <div class="relative pl-6 border-l border-cyan-500/30">
+                        <div class="absolute -left-[5px] top-0 w-2.5 h-2.5 rounded-full bg-cyan-500"></div>
+                        <p class="text-sm font-bold text-white uppercase">Keystone School of Engineering</p>
+                        <p class="text-[10px] text-cyan-400 tracking-widest uppercase">B.E. AI & Data Science (1st Year)</p>
+                    </div>
+                    <div class="relative pl-6 border-l border-white/10">
+                        <p class="text-xs text-white/90 uppercase font-bold">MCE Society's Junior College</p>
+                        <p class="text-[10px] text-slate-500 uppercase">HSC (11th & 12th)</p>
+                    </div>
+                    <div class="relative pl-6 border-l border-white/10">
+                        <p class="text-xs text-white/90 uppercase font-bold">Sardar Dastur Hoshang Boys' School</p>
+                        <p class="text-[10px] text-slate-500 uppercase">SSC (5th to 10th)</p>
+                    </div>
+                    <div class="relative pl-6 border-l border-white/10">
+                        <p class="text-xs text-white/90 uppercase font-bold">St. Matthew's Academy</p>
+                        <p class="text-[10px] text-slate-500 uppercase">Primary (1st to 4th)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-24 px-6 bg-black/40">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 uppercase tracking-tighter"><span class="neon-text-cyan">02.</span> Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-10 rounded-[2.5rem] border-white/5 text-center group hover:border-pink-500/50 transition-all duration-500">
+                    <i class="fas fa-gem big-icon text-pink-500 mb-8 block group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Bloom & Pearl</h3>
+                    <p class="text-slate-400 text-xs mb-8">Crochet Accessories E-commerce.</p>
+                    <a href="https://bloom-and-pearl.netlify.app/" target="_blank" class="text-[10px] font-bold text-pink-400 uppercase border border-pink-500/30 px-6 py-2 rounded-full hover:bg-pink-500 hover:text-black transition">Live Site</a>
+                </div>
+                <div class="glass p-10 rounded-[2.5rem] border-white/5 text-center group hover:border-cyan-500/50 transition-all duration-500">
+                    <i class="fas fa-chart-line big-icon text-cyan-500 mb-8 block group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">AI FinTrack</h3>
+                    <p class="text-slate-400 text-xs">Expense visualization system.</p>
+                </div>
+                <div class="glass p-10 rounded-[2.5rem] border-white/5 text-center group hover:border-red-500/50 transition-all duration-500">
+                    <i class="fas fa-fingerprint big-icon text-red-500 mb-8 block group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Laser Guard</h3>
+                    <p class="text-slate-400 text-xs">Laser-based alarm hardware.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-10 tracking-tighter uppercase">Get In <span class="neon-text-cyan">Touch</span></h2>
+            
+            <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="glass p-8 md:p-12 rounded-[2.5rem] border-white/10 space-y-6 text-left max-w-2xl mx-auto mb-16 shadow-2xl relative">
+                <input type="hidden" name="form-name" value="contact" />
+                <p class="hidden"><label>Spam filter: <input name="bot-field" /></label></p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-2">Name</label>
+                        <input type="text" name="name" placeholder="Saad Jamadar" required class="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-sm text-white input-glow transition-all">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-2">Email</label>
+                        <input type="email" name="email" placeholder="msajamadar@gmail.com" required class="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-sm text-white input-glow transition-all">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500 ml-2">Message</label>
+                    <textarea name="message" rows="4" placeholder="Let's build something awesome..." required class="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-sm text-white input-glow transition-all"></textarea>
+                </div>
+                <button type="submit" id="submit-btn" class="w-full bg-cyan-500 text-black font-bold uppercase tracking-widest py-4 rounded-2xl hover:shadow-[0_0_30px_rgba(0,243,255,0.4)] transition-all">
+                    Send Message
+                </button>
+            </form>
+
+            <div class="flex flex-wrap justify-center gap-10 md:gap-16">
+                <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank" class="text-slate-500 hover:text-cyan-400 text-6xl md:text-8xl transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/jamadar.saad.07/" target="_blank" class="text-slate-500 hover:text-pink-500 text-6xl md:text-8xl transition transform hover:scale-110"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Saad-github-07" target="_blank" class="text-slate-500 hover:text-purple-400 text-6xl md:text-8xl transition transform hover:scale-110"><i class="fab fa-github"></i></a>
+                <a href="mailto:msajamadar@gmail.com" class="text-slate-500 hover:text-green-400 text-6xl md:text-8xl transition transform hover:scale-110"><i class="fas fa-envelope-open-text"></i></a>
+            </div>
+            <p class="text-[10px] text-slate-700 uppercase tracking-[0.5em] mt-24">Built by Saad Jamadar &copy; 2025</p>
+        </div>
+    </section>
+
+    <script>
+        const contactForm = document.getElementById('contact-form');
+        const successMsg = document.getElementById('success-msg');
+        const submitBtn = document.getElementById('submit-btn');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Sending...";
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+                successMsg.style.display = 'block';
+                contactForm.reset();
+            })
+            .catch((error) => {
+                alert("Submission failed. Please try again.");
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Send Message";
+            });
+        });
+
+        // Extra guard to remove the logo from shadow DOM if the CSS part doesn't catch it immediately
+        window.addEventListener('load', () => {
+            const viewer = document.querySelector('spline-viewer');
+            if (viewer && viewer.shadowRoot) {
+                const style = document.createElement('style');
+                style.textContent = '#logo { display: none !important; }';
+                viewer.shadowRoot.appendChild(style);
+            }
+        });
+    </script>
+</body>
+</html>
+
